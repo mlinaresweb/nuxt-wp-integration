@@ -11,16 +11,13 @@ class="relative w-full bg-[url(https://images.unsplash.com/photo-1604014237800-1
 >
   <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
     <h1 class="text-3xl font-extrabold sm:text-5xl">
-      Let us find your
+     {{title}}
 
-      <strong class="block font-extrabold text-rose-700">
-        Forever Home.
-      </strong>
+     
     </h1>
 
     <p class="mt-4 max-w-lg sm:text-xl/relaxed">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
-      tenetur fuga ducimus numquam ea!
+     {{subtitle}}
     </p>
 
     <div class="mt-8 flex flex-wrap gap-4 text-center">
@@ -42,3 +39,10 @@ class="relative w-full bg-[url(https://images.unsplash.com/photo-1604014237800-1
 </div>
 </section>
 </template>
+
+<script setup>
+const props = defineProps({
+    title: String,
+    subtitle: String
+});
+</script>
