@@ -26,6 +26,10 @@ useServerSeoMeta({
     ogTitle: () => data.value[0].yoast_head_json.og_title,
     ogDescription: () => data.value[0].yoast_head_json.og_description,
     ogImage: () => data.value[0].yoast_head_json.og_image,
+    canonical: () => data.value[0].yoast_head_json.canonical_url.replace(
+        'https://wordpress-1123256-3934790.cloudwaysapps.com', 
+        'https://nuxt-wp-integration.vercel.app/'
+    ),
     ogType: () => data.value[0].yoast_head_json.og_type,
     ogLocale: () => data.value[0].yoast_head_json.og_locale,
     twitterCard: () => data.value[0].yoast_head_json.twitter_card,
