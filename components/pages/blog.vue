@@ -1,36 +1,19 @@
 <template>
-    <div class="blog-container">
-      <h1 class="mb-10">Blog</h1>
-      <div class="blog-post" v-for="post in posts" :key="post.id">
-        <h2>{{ post.title.rendered }}</h2>
-        <div v-html="post.content.rendered"></div>
-      </div>
+    <div>
+      <HeaderComponent :title="data.title.rendered" :subtitle="data.content.rendered"></HeaderComponent>
+      <p>hola</p>
     </div>
-</template>
+  </template>
   
-  <script lang="ts">
-  import { defineComponent, ref, onMounted } from "vue";
-  import { fetchPosts, Post } from "@/services/axios";
- 
+  <script setup>
+  import { ref } from 'vue'
+  import HeaderComponent from '@/components/HeaderComponent.vue';
   
-  export default defineComponent({
-    name: "BlogComponent",
-    setup() {
-      
-        const posts = ref<Post[]>([]);
-
-        const loadPosts = async () => {
-      posts.value = await fetchPosts();
-    };
-  
-    onMounted(loadPosts);
-  
-      return {
-        posts
-      };
-    },
+  const props = defineProps({
+    data: Object
   });
   </script>
+  
 
   
   <style scoped>
