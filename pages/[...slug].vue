@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineAsyncComponent } from 'vue'
+import { shallowRef, ref, defineAsyncComponent } from 'vue'
 const route = useRoute();
 
 let slug = ref('home')  // valor por defecto
@@ -13,7 +13,7 @@ const loadComponent = (name) => {
     return defineAsyncComponent(() => import(`@/components/pages/${name}.vue`))
 };
 
-const CurrentComponent = ref(loadComponent(slug.value));
+const CurrentComponent = shallowRef(loadComponent(slug.value));
 
 const { data, pending, error, refresh } = await useFetch('http://localhost/cochesdelujo/wp-json/wp/v2/pages', {
     query: { slug: slug.value }
