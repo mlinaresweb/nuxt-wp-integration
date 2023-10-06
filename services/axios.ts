@@ -9,7 +9,7 @@ export interface Post {
 
 export const fetchPosts = async (): Promise<Post[]> => {
   try {
-    const response = await axios.get('http://localhost/cochesdelujo/wp-json/wp/v2/posts?_embed');
+    const response = await axios.get('https://wordpress-1123256-3934790.cloudwaysapps.com/wp-json/wp/v2/posts?_embed');
     return response.data;
   } catch (error) {
     console.error("There was an error fetching the blog posts:", error);

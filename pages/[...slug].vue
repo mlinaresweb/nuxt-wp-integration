@@ -15,7 +15,7 @@ const loadComponent = (name) => {
 
 const CurrentComponent = shallowRef(loadComponent(slug.value));
 
-const { data, pending, error, refresh } = await useFetch('http://localhost/cochesdelujo/wp-json/wp/v2/pages', {
+const { data, pending, error, refresh } = await useFetch('https://wordpress-1123256-3934790.cloudwaysapps.com/wp-json/wp/v2/pages', {
     query: { slug: slug.value }
 });
 
