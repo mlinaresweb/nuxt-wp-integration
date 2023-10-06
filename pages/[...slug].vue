@@ -22,7 +22,7 @@ const { data, pending, error, refresh } = await useFetch('https://wordpress-1123
 useServerSeoMeta({
     title: () => data.value[0].yoast_head_json.title,
     description: () => data.value[0].yoast_head_json.description,
-    ogUrl: () => data.value[0].yoast_head_json.og_url,
+    ogUrl: () => data.value[0].yoast_head_json.og_url.replace('https://wordpress-1123256-3934790.cloudwaysapps.com', 'https://nuxt-wp-integration.vercel.app/'),
     ogTitle: () => data.value[0].yoast_head_json.og_title,
     ogDescription: () => data.value[0].yoast_head_json.og_description,
     ogImage: () => data.value[0].yoast_head_json.og_image,
