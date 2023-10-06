@@ -1,19 +1,31 @@
 <template>
     <div>
       <HeaderComponent :title="data.title.rendered" :subtitle="data.content.rendered"></HeaderComponent>
-      <p>hola</p>
+      <div class="blog-container" v-if="posts.length">
+        <div v-for="post in posts" :key="post.id" class="blog-post">
+          <h2>{{ post.title.rendered }}</h2>
+          <div v-html="post.content.rendered"></div>
+        </div>
+      </div>
+      <p v-else>No hay posts disponibles.</p>
     </div>
   </template>
   
   <script setup>
-  import { ref } from 'vue'
+  import { ref, onMounted } from 'vue'
   import HeaderComponent from '@/components/HeaderComponent.vue';
+  import { fetchPosts } from '@/services/axios'; // Cambia esta ruta al path correcto
   
   const props = defineProps({
     data: Object
   });
-  </script>
   
+  const posts = ref([]);
+  
+  onMounted(async () => {
+    posts.value = await fetchPosts();
+  });
+  </script>
 
   
   <style scoped>
