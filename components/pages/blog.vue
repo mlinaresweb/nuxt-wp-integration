@@ -14,7 +14,7 @@
   <script setup>
   import { ref, onMounted } from 'vue'
   import HeaderComponent from '@/components/HeaderComponent.vue';
-  import { fetchPosts } from '@/services/axios'; // Cambia esta ruta al path correcto
+  import { fetchPosts } from '@/services/axios'; 
   
   const props = defineProps({
     data: Object
