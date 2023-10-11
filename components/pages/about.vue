@@ -1,53 +1,53 @@
 <template>
   <div>
-    <h1>{{ data.title.rendered }}</h1>
-    <div v-html="data.content.rendered" ref="contentDiv"></div>
+    <form @submit.prevent="submitForm">
+      <input v-model="formData.yourName" placeholder="Your Name" required />
+      <input type="email" v-model="formData.yourEmail" placeholder="Your Email" required />
+      <input v-model="formData.yourSubject" placeholder="Your Subject" required />
+      <textarea v-model="formData.yourMessage" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </div>
 </template>
 
-<script lang="ts">
-import { ref, onMounted, defineProps } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
 
-export default {
-  props: {
-    data: {
-      type: Object,
-      required: true
-    }
-  },
-  setup() {
-    const contentDiv = ref<HTMLDivElement | null>(null);
+const formData = ref({
+  yourName: '',
+  yourEmail: '',
+  yourSubject: '',
+  yourMessage: ''
+});
 
-    onMounted(() => {
-      const form = contentDiv.value?.querySelector('form');
-
-      if (form) {
-        form.addEventListener('submit', async (e: Event) => {
-          e.preventDefault();
-
-          const formData = new FormData(form);
-          try {
-            const response = await fetch(form.action, {
-              method: 'POST',
-              body: formData,
-            });
-
-            if (response.ok) {
-              // Manejar la respuesta exitosa, por ejemplo:
-              alert('Formulario enviado exitosamente!');
-            } else {
-              // Manejar errores, por ejemplo:
-              alert('Hubo un error al enviar el formulario.');
-            }
-          } catch (error) {
-            // Manejar errores de red u otros errores
-            console.error('Error enviando el formulario:', error);
-          }
-        });
-      }
-    });
-
-    return { contentDiv };
+const submitForm = async () => {
+  const response = await sendDataToWP(formData.value);
+  if (response.status === 'mail_sent') {
+    alert('Mensaje enviado con éxito.');
+  } else {
+    alert('Error al enviar el mensaje.');
   }
-}
+};
+
+const sendDataToWP = async (data: any) => {
+  const apiUrl = 'https://wordpress-1123256-3934790.cloudwaysapps.com/wp-json/contact-form-7/v1/contact-forms/21/feedback';
+
+  const formData = new FormData();
+  formData.append('your-name', data.yourName);
+  formData.append('your-email', data.yourEmail);
+  formData.append('your-subject', data.yourSubject);
+  formData.append('your-message', data.yourMessage);
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      body: formData
+    });
+    return await response.json();
+  } catch (error) {
+    console.error("There was an error:", error);
+  }
+};
+
+
 </script>
