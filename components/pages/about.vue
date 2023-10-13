@@ -1,11 +1,15 @@
 <template>
-  <div>
-    <form @submit.prevent="submitForm">
-      <input v-model="formData.yourName" placeholder="Your Name" required />
-      <input type="email" v-model="formData.yourEmail" placeholder="Your Email" required />
-      <input v-model="formData.yourSubject" placeholder="Your Subject" required />
-      <textarea v-model="formData.yourMessage" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+  <div class="p-4">
+    <form @submit.prevent="submitForm" class="space-y-4">
+      <input class="border p-2 w-full rounded" v-model="formData.yourName" placeholder="Your Name" required />
+      
+      <input type="email" class="border p-2 w-full rounded" v-model="formData.yourEmail" placeholder="Your Email" required />
+      
+      <input class="border p-2 w-full rounded" v-model="formData.yourSubject" placeholder="Your Subject" required />
+      
+      <textarea class="border p-2 w-full rounded h-32" v-model="formData.yourMessage" placeholder="Your Message" required></textarea>
+      
+      <button type="submit" class="p-2 bg-blue-500 text-white rounded hover:bg-blue-600">Send</button>
     </form>
   </div>
 </template>

@@ -1,13 +1,17 @@
 <script setup>
 import { shallowRef, ref, defineAsyncComponent } from 'vue'
+import { fetchPage } from '@/services/page'; // Asegúrate de cambiar la ruta al archivo correctamente
+
 const route = useRoute();
 
-let language = ref('es')  
-let slug = ref('home')    
+let language = ref('es');  
+let slug = ref('home');    
+
 
 if (route.params.slug && route.params.slug.length > 1) {
     language.value = route.params.slug[0]
     slug.value = route.params.slug[1]
+    console.log(language.value)
 }
 
 
@@ -17,8 +21,8 @@ const loadComponent = (name) => {
 
 const CurrentComponent = shallowRef(loadComponent(slug.value));
 
-const { data, pending, error, refresh } = await useFetch('https://wordpress-1123256-3934790.cloudwaysapps.com/wp-json/wp/v2/pages', {
-    query: { slug: slug.value }
+const { data, pending, error, refresh,  } = await useFetch('https://wordpress-1123256-3934790.cloudwaysapps.com/wp-json/wp/v2/pages', {
+    query: { slug: slug.value, language:language.value }
 });
 
 useServerSeoMeta({
