@@ -2,8 +2,8 @@
 import { shallowRef, ref, defineAsyncComponent } from 'vue'
 const route = useRoute();
 
-let language = ref('es')  // valor por defecto
-let slug = ref('home')    // valor por defecto
+let language = ref('es')  
+let slug = ref('home')    
 
 if (route.params.slug && route.params.slug.length > 1) {
     language.value = route.params.slug[0]

@@ -27,21 +27,21 @@
       </div>
     </div>
     <select v-model="selectedLanguage" @change="changeLanguage">
-      <option value="es">Español</option>
-      <option value="en">English</option>
-    </select>
+    <option value="es">Español</option>
+    <option value="en">English</option>
+  </select>
   </nav>
 
   </template>
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 
 const router = useRouter();
 const { locale } = useI18n();
 
-// Ref para mantener el estado del lenguaje seleccionado
+// Inicializa selectedLanguage con el valor actual de locale
 const selectedLanguage = ref(locale.value);
 
 function changeLanguage() {
@@ -51,5 +51,15 @@ function changeLanguage() {
   if (router.currentRoute.value.path !== newPath) {
     router.push({ path: newPath });
   }
+
+  // Al cambiar el idioma, guárdalo en localStorage
+  localStorage.setItem('selectedLanguage', selectedLanguage.value);
 }
+
+// Este código se ejecuta al montar el componente
+onMounted(() => {
+  // Intenta obtener el idioma seleccionado de localStorage si estás en el lado del cliente
+  const initialLanguage = process.client ? localStorage.getItem('selectedLanguage') || locale.value : locale.value;
+  selectedLanguage.value = initialLanguage;
+});
 </script>

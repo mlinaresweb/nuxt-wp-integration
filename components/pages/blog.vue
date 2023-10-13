@@ -8,11 +8,16 @@
         </div>
       </div>
       <p v-else>No hay posts disponibles.</p>
+      <div>Current Route: {{ $route.path }}</div>
+      <div>Route Params: {{ route.params }}</div>
+
+
     </div>
   </template>
   
   <script setup>
-  import { ref, onMounted } from 'vue'
+  import { ref, onMounted,watchEffect   } from 'vue';
+  import { useRoute } from 'vue-router';
   import HeaderComponent from '@/components/HeaderComponent.vue';
   import { fetchPosts } from '@/services/axios'; 
   
@@ -21,12 +26,16 @@
   });
   
   const posts = ref([]);
+  const route = useRoute();  // Usamos el hook useRoute para obtener la ruta actual.
   
-  onMounted(async () => {
-    posts.value = await fetchPosts();
+  watchEffect(async () => {
+    const lang = route.params.slug[0] || 'es'; 
+    console.log("Current Language:", lang);
+    posts.value = await fetchPosts(lang);
   });
-  </script>
 
+  </script>
+  
   
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
