@@ -15,17 +15,41 @@
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
-            <NuxtLink  to="/" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</NuxtLink >
+            <NuxtLink  :to="`/${$i18n.locale}/home`" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</NuxtLink >
           </li>
           <li>
-            <NuxtLink  to="/blog" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</NuxtLink >
+            <NuxtLink  :to="`/${$i18n.locale}/blog`" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</NuxtLink >
           </li>
           <li>
-            <NuxtLink  to="/about" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</NuxtLink >          </li>
+            <NuxtLink  :to="`/${$i18n.locale}/about`" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</NuxtLink >          </li>
          
         </ul>
       </div>
     </div>
+    <select v-model="selectedLanguage" @change="changeLanguage">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+    </select>
   </nav>
 
   </template>
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+
+const router = useRouter();
+const { locale } = useI18n();
+
+// Ref para mantener el estado del lenguaje seleccionado
+const selectedLanguage = ref(locale.value);
+
+function changeLanguage() {
+  locale.value = selectedLanguage.value;
+
+  const newPath = `/${selectedLanguage.value}/${router.currentRoute.value.params.slug[1] || 'home'}`;
+  if (router.currentRoute.value.path !== newPath) {
+    router.push({ path: newPath });
+  }
+}
+</script>

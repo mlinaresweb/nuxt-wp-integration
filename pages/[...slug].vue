@@ -2,12 +2,14 @@
 import { shallowRef, ref, defineAsyncComponent } from 'vue'
 const route = useRoute();
 
-let slug = ref('home')  // valor por defecto
+let language = ref('es')  // valor por defecto
+let slug = ref('home')    // valor por defecto
 
-if (route.params.slug) {
-    let lastIndex = route.params.slug.length - 1
-    slug.value = route.params.slug[lastIndex] || route.params.slug[lastIndex - 1];
-};
+if (route.params.slug && route.params.slug.length > 1) {
+    language.value = route.params.slug[0]
+    slug.value = route.params.slug[1]
+}
+
 
 const loadComponent = (name) => {
     return defineAsyncComponent(() => import(`@/components/pages/${name}.vue`))

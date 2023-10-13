@@ -7,20 +7,12 @@
     <FooterComponent></FooterComponent>
   </div>
 </template>
-
 <script>
-import FooterComponent from '../components/FooterComponent.vue';
-import NavBar from '../components/NavBar.vue';
-
-
-
 export default {
-  components: {
-    NavBar,
-    FooterComponent
-}
+  middleware: ['redirect']
 }
 </script>
+
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/main.css'],
@@ -10,5 +11,8 @@ export default defineNuxtConfig({
     },
    
   },
-
+  plugins: [
+    '~/plugins/i18n.ts'
+  ],
+  
 })
