@@ -56,7 +56,7 @@ function changeLanguage() {
   localStorage.setItem('selectedLanguage', selectedLanguage.value);
 }
 
-// Este código se ejecuta al montar el componente
+
 onMounted(() => {
   // Intenta obtener el idioma seleccionado de localStorage si estás en el lado del cliente
   const initialLanguage = process.client ? localStorage.getItem('selectedLanguage') || locale.value : locale.value;
