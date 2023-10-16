@@ -9,7 +9,7 @@
   
   <!-- Texto centrado para móviles, junto con logo para pantallas más grandes -->
   <div class="flex items-center justify-center space-x-4 md:justify-start w-full md:w-auto">
-        <img src="../public/logo.png" alt="Logo" class="h-8 w-auto hidden md:block"> <!-- Oculta en móviles -->
+        <img src="/logo.png" alt="Logo" class="h-8 w-auto hidden md:block"> <!-- Oculta en móviles -->
         <span class="font-bold text-white">Coches de Lujo</span>
       </div>
  <!-- Menú de navegación para pantallas grandes -->

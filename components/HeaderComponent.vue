@@ -1,7 +1,7 @@
 <template>
   <section
     class="relative w-full bg-cover bg-center bg-no-repeat"
-    style="background-image: url('/bannercoche.png');"
+    style="background-image: url('/bannercoche.webp');"
   >
     <!-- Degradado oscuro -->
     <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-60"></div>
