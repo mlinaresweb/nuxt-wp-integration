@@ -27,11 +27,12 @@
 
         <!-- Icono de menú hamburguesa para pantallas móviles -->
         <div class="flex md:hidden items-center space-x-4">
-            <button @click="isMenuOpen = !isMenuOpen" class="focus:outline-none">
-                <div class="w-6 h-0.5 bg-white mb-1.5"></div>
-                <div class="w-6 h-0.5 bg-white mb-1.5"></div>
-                <div class="w-6 h-0.5 bg-white"></div>
-            </button>
+          <button @click="toggleMenu" class="focus:outline-none" :aria-label="isMenuOpen ? 'Cerrar menú' : 'Abrir menú'">
+    <div class="w-6 h-0.5 bg-white mb-1.5"></div>
+    <div class="w-6 h-0.5 bg-white mb-1.5"></div>
+    <div class="w-6 h-0.5 bg-white"></div>
+</button>
+
         </div>
       </div>
 
@@ -86,6 +87,9 @@ watch(outsideClicked, (newValue) => {
         isMenuOpen.value = false;
     }
 });
+function toggleMenu() {
+    isMenuOpen.value = !isMenuOpen.value;
+}
 
 onMounted(() => {
   // Intenta obtener el idioma seleccionado de localStorage si estás en el lado del cliente
