@@ -12,13 +12,13 @@ export function useOutsideClick(targetRef: Ref<HTMLElement | null>): Ref<boolean
     }
 
     onMounted(() => {
-        window.addEventListener('click', checkOutsideClick, true); // true para usar la fase de captura
-        window.addEventListener('scroll', checkOutsideClick, true); // true para usar la fase de captura
+        window.addEventListener('click', checkOutsideClick, true); 
+        window.addEventListener('scroll', checkOutsideClick, true); 
     });
     
     onUnmounted(() => {
-        window.removeEventListener('click', checkOutsideClick, true); // true para usar la fase de captura
-        window.removeEventListener('scroll', checkOutsideClick, true); // true para usar la fase de captura
+        window.removeEventListener('click', checkOutsideClick, true); 
+        window.removeEventListener('scroll', checkOutsideClick, true); 
     });
 
     return isOutside;
