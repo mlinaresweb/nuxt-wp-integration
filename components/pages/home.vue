@@ -1,7 +1,8 @@
 <template>
     <div>
       <HeaderComponent :title="data.title.rendered" :subtitle="data.content.rendered"></HeaderComponent>
-      <h1>{{ $t('hello', { name: 'vue-i18n' }) }}</h1> 
+      <!-- <h1>{{ $t('hello', { name: 'vue-i18n' }) }}</h1>  -->
+      <LuxuryCarRental />
 
     </div>
   </template>

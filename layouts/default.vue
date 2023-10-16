@@ -1,7 +1,7 @@
 <template>
   <div>
     <slot></slot>
-    <FooterComponent></FooterComponent>
+    <!-- <FooterComponent></FooterComponent> -->
   </div>
 </template>
 

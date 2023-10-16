@@ -4,16 +4,16 @@
   
         <!-- Logo a la izquierda solo para móviles -->
         <a href="#" class="md:hidden">
-          <img src="../public/logo.png" alt="Logo" class="h-8 w-auto">
+          <img src="/logo.png" alt="Logo" class="h-8 w-auto">
         </a>
   
   <!-- Texto centrado para móviles, junto con logo para pantallas más grandes -->
-  <div class="flex items-center justify-center space-x-2 md:justify-start w-full md:w-auto">
+  <div class="flex items-center justify-center space-x-4 md:justify-start w-full md:w-auto">
         <img src="../public/logo.png" alt="Logo" class="h-8 w-auto hidden md:block"> <!-- Oculta en móviles -->
         <span class="font-bold text-white">Coches de Lujo</span>
       </div>
  <!-- Menú de navegación para pantallas grandes -->
- <div class="hidden md:flex items-center space-x-10">
+ <div class="hidden md:flex items-center space-x-8">
             <a href="#" class="text-white">Inicio</a>
             <a href="#" class="text-white">Alquiler</a>
             <a href="#" class="text-white">Coches</a>
