@@ -2,7 +2,6 @@
 <!--  -->
 <template>
   <div>
-    <NavBar></NavBar>
     <slot></slot>
     <FooterComponent></FooterComponent>
   </div>
