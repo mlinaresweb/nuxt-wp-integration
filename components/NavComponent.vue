@@ -43,10 +43,11 @@
               <a href="#" class="text-white">Coches</a>
               <a href="#" class="text-white">Blog</a>
               <a href="#" class="text-white">Contacto</a>
-              <select v-model="selectedLanguage" @change="changeLanguage" class="text-white bg-transparent border-none appearance-none">
-                  <option class="bg-black text-white" value="es">ES</option>
-                  <option class="bg-black text-white" value="en">EN</option>
-              </select>
+              <select aria-label="Seleccionar idioma" v-model="selectedLanguage" @change="changeLanguage" class="text-white bg-transparent border-none appearance-none">
+  <option class="bg-black text-white" value="es">ES</option>
+  <option class="bg-black text-white" value="en">EN</option>
+</select>
+
           </div>
       </div>
     </nav>
