@@ -28,7 +28,14 @@ const { data, pending, error, refresh,  } = await useFetch('https://wordpress-11
 useHead(() => ({
   htmlAttrs: {
     lang: language.value
-  }
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }
+  ]
 }));
 useServerSeoMeta({
     title: () => data.value[0].yoast_head_json.title,
