@@ -1,8 +1,8 @@
 <template>
   <div class="bg-white p-12 rounded-lg mx-12 ">
-      <h2 class="text-2xl font-semibold mb-4">Alquiler de coches de Lujo Barcelona</h2>
-      <p class="mb-6">Vive una experiencia inolvidable al volante del coche de tus sueños. En nuestra extensa gama de vehículos, encontrarás las marcas más prestigiosas y exclusivas del mercado. Desde un superdeportivo que te hará sentir la emoción de la velocidad, hasta un espacioso y cómodo SUV ideal para disfrutar de una agradable excursión en familia. Puedes alquilarlo por horas o días, o si lo prefieres, explorar nuestras rutas y experiencias Vip para descubrir la cultura y los idílicos paisajes de Catalunya. Con más de una década de experiencia en el alquiler de coches de lujo, te garantizamos que no te decepcionaremos.</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 overflow-hidden  lg:max-h-[60vh] md:max-h-[62vh] max-h-[62vh] -mr-32"> 
+      <h2 class="text-2xl font-semibold mb-10 mt-4">Alquiler de coches de Lujo Barcelona</h2>
+      <p class="mb-14">Vive una experiencia inolvidable al volante del coche de tus sueños. En nuestra extensa gama de vehículos, encontrarás las marcas más prestigiosas y exclusivas del mercado. Desde un superdeportivo que te hará sentir la emoción de la velocidad, hasta un espacioso y cómodo SUV ideal para disfrutar de una agradable excursión en familia. Puedes alquilarlo por horas o días, o si lo prefieres, explorar nuestras rutas y experiencias Vip para descubrir la cultura y los idílicos paisajes de Catalunya. Con más de una década de experiencia en el alquiler de coches de lujo, te garantizamos que no te decepcionaremos.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 overflow-hidden  lg:max-h-[60vh] md:max-h-[62vh] max-h-[62vh] -mr-32 mb-12"> 
 
         <div class="relative grid h-[22rem] w-full max-w-[28rem] flex-col items-end justify-start overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
         <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://i.ibb.co/7NRZzGH/bmw.webp')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">

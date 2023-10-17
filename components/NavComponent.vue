@@ -4,12 +4,12 @@
   
         <!-- Logo a la izquierda solo para móviles -->
         <a href="#" class="md:hidden">
-          <img src="/logo.png" alt="Logo" class="h-8 w-auto">
+          <img src="https://i.ibb.co/T8FGxdn/logo.webp" alt="Logo" class="h-8 w-6">
         </a>
   
   <!-- Texto centrado para móviles, junto con logo para pantallas más grandes -->
   <div class="flex items-center justify-center space-x-4 md:justify-start w-full md:w-auto">
-        <img src="/logo.png" alt="Logo" class="h-8 w-auto hidden md:block"> <!-- Oculta en móviles -->
+        <img src="https://i.ibb.co/T8FGxdn/logo.webp" alt="Logo" class="h-8 w-6 hidden md:block"> <!-- Oculta en móviles -->
         <span class="font-bold text-white">Coches de Lujo</span>
       </div>
  <!-- Menú de navegación para pantallas grandes -->
@@ -20,7 +20,7 @@
             <a href="#" class="text-white">Blog</a>
             <a href="#" class="text-white">Contacto</a>
             <label :for="dynamicId" class="sr-only">{{ labelForSelectedLanguage }}</label>
-<select :id="dynamicId" aria-label="Seleccionar idioma" v-model="selectedLanguage" @change="changeLanguage" class="text-white bg-transparent border-none appearance-none">
+              <select :id="dynamicId" aria-label="Seleccionar idioma" v-model="selectedLanguage" @change="changeLanguage" class="text-white bg-transparent border-none appearance-none">
                 <option class="bg-black text-white" value="es">ES</option>
                 <option class="bg-black text-white" value="en">EN</option>
             </select>
@@ -71,11 +71,13 @@ const selectedLanguage = ref(locale.value);
 const isMenuOpen = ref(false);  // Variable para controlar la apertura del menú
 const navRef = ref(null);
 const outsideClicked = useOutsideClick(navRef);
+
 const dynamicId = "language-selector";
 
 const labelForSelectedLanguage = computed(() => {
   return selectedLanguage.value === "es" ? "Cambiar idioma (actualmente en Español)" : "Change language (currently in English)";
 });
+
 function changeLanguage() {
   locale.value = selectedLanguage.value;
 
@@ -104,3 +106,17 @@ onMounted(() => {
 });
 </script>
 
+<style scoped>
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+</style>
