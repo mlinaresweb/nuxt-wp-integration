@@ -5,6 +5,9 @@
       <LuxuryCarRental />
       <InfoCar/>
       <ServicesComponent/>
+      <Testimonials/>
+      <BannerSecundario/>
+      <CarBrands/>
     </div>
   </template>
   
