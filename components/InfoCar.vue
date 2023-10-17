@@ -7,25 +7,25 @@
         </p>
         <ul class="space-y-6 mx-14 mt-12">
           <li class="flex items-center text-white space-x-2 gap-4">
-            <img src="/excelencia.webp" alt="Icono Excelencia" class="w-8 h-8">
+            <img src="https://i.ibb.co/mz13GP2/excelencia.webp" alt="Icono Excelencia" class="w-8 h-8">
             Excelencia
           </li>
           <li class="flex items-center text-white space-x-2 gap-4">
-            <img src="confi.webp" alt="Icono Confianza" class="w-8 h-8">
+            <img src="https://i.ibb.co/qrSfwTs/confianza.webp" alt="Icono Confianza" class="w-8 h-8">
             Confianza
           </li>
           <li class="flex items-center text-white space-x-2 gap-4">
-            <img src="inmediatez.webp" alt="Icono Inmediatez" class="w-8 h-8">
+            <img src="https://i.ibb.co/2gmQFTM/inmediatez.webp" alt="Icono Inmediatez" class="w-8 h-8">
             Inmediatez
           </li>
           <li class="flex items-center text-white space-x-2 gap-4">
-            <img src="exclusividad.webp" alt="Icono Exclusividad" class="w-8 h-8">
+            <img src="https://i.ibb.co/phC3p6m/exclusividad.webp" alt="Icono Exclusividad" class="w-8 h-8">
             Exclusividad
           </li>
         </ul>
       </div>
       <div class="w-1/2">
-        <img src="/coche2.webp" alt="Luxury Cars" class="h-full w-full object-cover">
+        <img src="https://i.ibb.co/q7XF7dr/coche2.webp" alt="Luxury Cars" class="h-full w-full object-cover">
       </div>
     </div>
   </template>
