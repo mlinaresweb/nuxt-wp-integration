@@ -4,12 +4,12 @@
   
         <!-- Logo a la izquierda solo para móviles -->
         <a href="#" class="md:hidden">
-          <img src="https://i.ibb.co/T8FGxdn/logo.webp" alt="Logo" >
+          <img src="https://i.ibb.co/T8FGxdn/logo.webp" alt="Logo" class="h-auto w-auto">
         </a>
   
   <!-- Texto centrado para móviles, junto con logo para pantallas más grandes -->
   <div class="flex items-center justify-center space-x-4 md:justify-start w-full md:w-auto">
-        <img src="https://i.ibb.co/T8FGxdn/logo.webp" alt="Logo" class=" hidden md:block"> <!-- Oculta en móviles -->
+        <img src="https://i.ibb.co/T8FGxdn/logo.webp" alt="Logo" class="h-auto w-auto hidden md:block"> <!-- Oculta en móviles -->
         <span class="font-bold text-white">Coches de Lujo</span>
       </div>
  <!-- Menú de navegación para pantallas grandes -->
