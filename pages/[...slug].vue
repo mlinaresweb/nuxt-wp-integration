@@ -1,6 +1,6 @@
 <script setup>
 import { shallowRef, ref, defineAsyncComponent } from 'vue'
-import { fetchPage } from '@/services/page'; // Asegúrate de cambiar la ruta al archivo correctamente
+import { fetchPage } from '@/services/page'; 
 
 
 const route = useRoute();

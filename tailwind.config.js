@@ -10,7 +10,11 @@ module.exports = {
 
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'luxury-blue': '#0E153B'
+      }
+    },
   },
   plugins: [
     require('flowbite/plugin')
