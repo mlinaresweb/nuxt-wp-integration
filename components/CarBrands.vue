@@ -1,14 +1,15 @@
 <template>
-    <div class="brands-container py-8 md:mx-16 lg:mx-16 max-w-screen-xl ">
-      <h2 class="text-start mb-6 font-semibold text-xl ml-12">Nuestras marcas</h2>
-      <div class="grid grid-cols-8 gap-4">
-        <div v-for="brand in brands" :key="brand.name" class="flex flex-col items-center justify-center">
-          <img :src="brand.imageUrl" :alt="brand.name" class="w-8 h-auto object-contain mb-2">
-          <span class="text-sm">{{ brand.name }}</span>
-        </div>
+  <div class="brands-container py-8 md:mx-16 lg:mx-16 max-w-screen-xl mx-auto">
+    <h2 class="text-start mb-6 font-semibold text-xl ml-12">Nuestras marcas</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+      <div v-for="brand in brands" :key="brand.name" class="flex flex-col items-center justify-center">
+        <img :src="brand.imageUrl" :alt="brand.name" class="w-8 h-auto object-contain mb-2">
+        <span class="text-sm">{{ brand.name }}</span>
       </div>
     </div>
-  </template>
+  </div>
+</template>
+
   
   
   <script lang="ts">
