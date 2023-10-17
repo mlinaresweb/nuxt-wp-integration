@@ -1,9 +1,10 @@
 <template>
     <div>
-      <HeaderComponent :title="data.title.rendered" :subtitle="data.content.rendered"></HeaderComponent>
+      <HeaderComponent :title="data.title.rendered" :subtitle="data.content.rendered"/>
       <!-- <h1>{{ $t('hello', { name: 'vue-i18n' }) }}</h1>  -->
       <LuxuryCarRental />
       <InfoCar/>
+      <ServicesComponent/>
     </div>
   </template>
   
