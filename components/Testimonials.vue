@@ -1,26 +1,33 @@
 <template>
-    <div class="md:mx-24 lg:mx-24 mb-12 mt-8">
-      <h2 class="text-2xl font-semibold mb-12">¿Qué opinan nuestros clientes?</h2>
-    
-      <div class="flex space-x-4">
-        <div v-for="testimonial in testimonials" :key="testimonial.name"
-             :class="[testimonial.name === 'John Martin' ? 'bg-gray-700 text-white' : 'bg-gray-100', 'flex flex-col space-y-4 p-8 rounded-lg']">
-          <div class="flex space-x-4">
-            <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
-            <div>
-              <h3 class="font-bold">{{ testimonial.name }}</h3>
-              <p>{{ testimonial.company }}</p>
-            </div>
+  <div class="md:mx-24 lg:mx-24 mb-12 mt-8">
+    <h2 class="text-2xl font-semibold mb-12">¿Qué opinan nuestros clientes?</h2>
+
+    <div class="flex space-x-4">
+      <div 
+        v-for="(testimonial, index) in testimonials" 
+        :key="testimonial.name"
+        :class="[
+          testimonial.name === 'John Martin' ? 'bg-gray-700 text-white' : 'bg-gray-100', 
+          'flex flex-col space-y-4 p-8 rounded-lg', 
+          index > 0 ? 'hidden md:flex' : ''
+        ]"
+      >
+        <div class="flex space-x-4">
+          <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+          <div>
+            <h3 class="font-bold">{{ testimonial.name }}</h3>
+            <p>{{ testimonial.company }}</p>
           </div>
-          <p>{{ testimonial.feedback }}</p>
-          <div class="mt-4">
-            <span v-for="n in 5" :key="n" :class="n <= testimonial.rating ? 'text-yellow-400' : 'text-gray-300'">★</span>
-          </div>
+        </div>
+        <p>{{ testimonial.feedback }}</p>
+        <div class="mt-4">
+          <span v-for="n in 5" :key="n" :class="n <= testimonial.rating ? 'text-yellow-400' : 'text-gray-300'">★</span>
         </div>
       </div>
     </div>
-  </template>
-  
+  </div>
+</template>
+
   
   
   <script lang="ts">
