@@ -1,6 +1,6 @@
 <template>
     <nav class="absolute top-0 left-0 right-0 z-20 flex items-center justify-center h-16 px-8 bg-black bg-opacity-70 ">
-      <div class="flex items-center justify-between w-full mx-16">
+      <div class="flex items-center justify-between w-full md:mx-16 lg:mx-16">
   
         <!-- Logo a la izquierda solo para móviles -->
         <a href="#" class="md:hidden">

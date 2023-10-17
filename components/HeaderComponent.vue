@@ -12,7 +12,7 @@
     <div
       class="relative z-10 max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
     >
-      <div class="mx-16 text-left ltr:sm:text-left rtl:sm:text-right">
+      <div class="md:mx-16 lg:mx-16 text-left ltr:sm:text-left rtl:sm:text-right">
         <h1 class="text-3xl font-extrabold sm:text-5xl text-white" style="max-width: 380px;">
           {{ title }}
         </h1>

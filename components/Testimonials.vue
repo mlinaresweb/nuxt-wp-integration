@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-24 mb-12 mt-8">
+    <div class="md:mx-24 lg:mx-24 mb-12 mt-8">
       <h2 class="text-2xl font-semibold mb-12">¿Qué opinan nuestros clientes?</h2>
     
       <div class="flex space-x-4">

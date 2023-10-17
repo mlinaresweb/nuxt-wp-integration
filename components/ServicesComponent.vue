@@ -1,5 +1,5 @@
 <template>
-    <div class="p-10 mx-14">
+    <div class="p-10 md:mx-14 lg:mx-14">
       <h2 class="text-3xl mb-10 mt-6">Otros servicios</h2>
       <div class="grid grid-cols-3 gap-8 mb-6">
 

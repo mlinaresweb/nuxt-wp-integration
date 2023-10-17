@@ -1,5 +1,5 @@
 <template>
-    <div class="brands-container py-8 mx-16 max-w-screen-xl ">
+    <div class="brands-container py-8 md:mx-16 lg:mx-16 max-w-screen-xl ">
       <h2 class="text-start mb-6 font-semibold text-xl ml-12">Nuestras marcas</h2>
       <div class="grid grid-cols-8 gap-4">
         <div v-for="brand in brands" :key="brand.name" class="flex flex-col items-center justify-center">
