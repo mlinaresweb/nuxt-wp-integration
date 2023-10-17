@@ -4,7 +4,11 @@
   
         <!-- Logo a la izquierda solo para móviles -->
         <a href="#" class="md:hidden">
-          <img src="https://i.ibb.co/T8FGxdn/logo.webp" alt="Logo"  width="22" height="33" class="">
+          <picture>
+   <source media="(max-width: 600px)" srcset="https://i.ibb.co/T8FGxdn/logo-small.webp">
+   <source media="(min-width: 601px)" srcset="https://i.ibb.co/T8FGxdn/logo-large.webp">
+   <img src="https://i.ibb.co/T8FGxdn/logo-default.webp" alt="Logo">
+</picture>
         </a>
   
   <!-- Texto centrado para móviles, junto con logo para pantallas más grandes -->
