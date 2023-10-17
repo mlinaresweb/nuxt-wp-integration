@@ -11,7 +11,7 @@
             Excelencia
           </li>
           <li class="flex items-center text-white space-x-2 gap-4">
-            <img src="confianza.webp" alt="Icono Confianza" class="w-8 h-8">
+            <img src="confi.webp" alt="Icono Confianza" class="w-8 h-8">
             Confianza
           </li>
           <li class="flex items-center text-white space-x-2 gap-4">
