@@ -25,6 +25,8 @@
     "@nuxtjs/i18n": "^7.3.1",
     "@types/axios": "^0.14.0",
     "axios": "^1.5.1",
-    "flowbite": "^1.8.1"
+    "flowbite": "^1.8.1",
+    "nuxt-swiper": "^1.2.2",
+    "swiper": "^10.3.1"
   }
 }
