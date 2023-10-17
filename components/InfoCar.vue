@@ -5,7 +5,7 @@
         <p class="text-white mb-10 mx-14 mt-10">
           En CochesdeLujo, no nos conformamos con solo alquilar un coche de lujo. Nuestro propósito es ofrecerte una experiencia única y apasionante. Queremos que cada instante se a vuelto inolvidable lleno de emociones.
         </p>
-        <ul class="grid gap-4 sm:space-y-6 mx-14 mt-10 sm:grid-cols-1 grid-cols-2">
+        <ul class="grid gap-4 sm:space-y-4 mx-14 mt-10 sm:grid-cols-1 grid-cols-2">
           <li class="flex items-center text-white space-x-2 gap-4">
             <img src="https://i.ibb.co/mz13GP2/excelencia.webp" alt="Icono Excelencia" class="w-8 h-8">
             Excelencia
