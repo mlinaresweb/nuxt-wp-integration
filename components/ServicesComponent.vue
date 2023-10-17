@@ -8,9 +8,9 @@
     <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/100 via-black/0"></div>
   </div>
   <div class="relative p-6  px-6 ">
-    <h5 class="mb-2 block font-sans  font-semibold leading-snug tracking-normal text-white antialiased ">
+    <p class="mb-2 block font-sans  font-semibold leading-snug tracking-normal text-white antialiased ">
       Visita guiada
-    </h5>
+    </p>
     <p class="-mb-2 text-left text-orange-400">Info</p>
   </div>
 </div>
@@ -20,9 +20,9 @@
     <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/100 via-black/0"></div>
   </div>
   <div class="relative p-6  px-6 ">
-    <h5 class="mb-2 block font-sans  font-semibold leading-snug tracking-normal text-white antialiased ">
+    <p class="mb-2 block font-sans  font-semibold leading-snug tracking-normal text-white antialiased ">
       Recogida en aeropuerto
-    </h5>
+    </p>
     <p class="-mb-2 text-left text-orange-400">Info</p>
   </div>
 </div>
@@ -32,9 +32,9 @@
     <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/100 via-black/0"></div>
   </div>
   <div class="relative p-6  px-6 ">
-    <h5 class="mb-2 block font-sans  font-semibold leading-snug tracking-normal text-white antialiased ">
+    <p class="mb-2 block font-sans  font-semibold leading-snug tracking-normal text-white antialiased ">
       Servicio Chófer
-    </h5>
+    </p>
     <p class="-mb-2 text-left text-orange-400">Info</p>
   </div>
 </div>

@@ -19,7 +19,8 @@
             <a href="#" class="text-white">Coches</a>
             <a href="#" class="text-white">Blog</a>
             <a href="#" class="text-white">Contacto</a>
-            <select v-model="selectedLanguage" @change="changeLanguage" class="text-white bg-transparent border-none appearance-none">
+            <label :for="dynamicId" class="sr-only">{{ labelForSelectedLanguage }}</label>
+<select :id="dynamicId" aria-label="Seleccionar idioma" v-model="selectedLanguage" @change="changeLanguage" class="text-white bg-transparent border-none appearance-none">
                 <option class="bg-black text-white" value="es">ES</option>
                 <option class="bg-black text-white" value="en">EN</option>
             </select>
@@ -44,7 +45,8 @@
               <a href="#" class="text-white">Coches</a>
               <a href="#" class="text-white">Blog</a>
               <a href="#" class="text-white">Contacto</a>
-              <select aria-label="Seleccionar idioma" v-model="selectedLanguage" @change="changeLanguage" class="text-white bg-transparent border-none appearance-none">
+              <label :for="dynamicId" class="sr-only">{{ labelForSelectedLanguage }}</label>
+<select :id="dynamicId" aria-label="Seleccionar idioma" v-model="selectedLanguage" @change="changeLanguage" class="text-white bg-transparent border-none appearance-none">
   <option class="bg-black text-white" value="es">ES</option>
   <option class="bg-black text-white" value="en">EN</option>
 </select>
@@ -69,7 +71,11 @@ const selectedLanguage = ref(locale.value);
 const isMenuOpen = ref(false);  // Variable para controlar la apertura del menú
 const navRef = ref(null);
 const outsideClicked = useOutsideClick(navRef);
+const dynamicId = "language-selector";
 
+const labelForSelectedLanguage = computed(() => {
+  return selectedLanguage.value === "es" ? "Cambiar idioma (actualmente en Español)" : "Change language (currently in English)";
+});
 function changeLanguage() {
   locale.value = selectedLanguage.value;
 
