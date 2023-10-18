@@ -18,7 +18,7 @@
       <swiper-slide v-for="car in cars" :key="car.name">
         <div>
           <div class="relative grid h-[22rem] w-full max-w-[28rem] flex-col items-end justify-start overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700 ">
-            <div :style="{ backgroundImage: `url(${car.image})` }" class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-cover bg-clip-border bg-cover bg-center text-gray-700 shadow-none ">
+            <div :style="{ backgroundImage: `url(${car.image})` }" loading="lazy"  class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-cover bg-clip-border bg-cover bg-center text-gray-700 shadow-none ">
               <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/100 via-black/0"></div>
             </div>
             <div class="relative p-6 px-6">

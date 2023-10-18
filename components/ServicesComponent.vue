@@ -18,7 +18,8 @@
         >
           <div 
             class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent shadow-none" 
-            :style="`background-image: url(${servicio.imagen});`"
+            :style="`background-image: url(${servicio.imagen});`" 
+            loading="lazy"
           >
             <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/100 via-black/0"></div>
           </div>

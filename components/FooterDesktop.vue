@@ -3,7 +3,7 @@
       <div class="container mx-16 grid grid-cols-4  gap-6 2xl:mx-auto  2xl:gap-44">
         <div>
             <div class="flex items-center mb-4">
-                <NuxtImg src="/logo.png" alt="Logo" class="mr-4" width="20px" height="30px"/>
+                <NuxtImg src="/logo.png" alt="Logo" class="mr-4" loading="lazy" width="20px" height="30px"/>
                 <h1 class="font-bold text-xl">Coches de Lujo</h1>
             </div>
           <div class="space-y-2">
