@@ -2,7 +2,7 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/main.css'],
+  css: ['~/assets/main.css',  'swiper/swiper-bundle.css'],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -20,6 +20,6 @@ export default defineNuxtConfig({
     //----------------------
     prefix: 'Swiper',
     styleLang: 'css',
-    // modules: ['navigation', 'pagination'], // all modules are imported by default
+    // modules: ['navigation'], // all modules are imported by default
   }
 })
