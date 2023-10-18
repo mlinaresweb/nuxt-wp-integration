@@ -24,7 +24,13 @@
       <swiper-slide v-for="brand in brands" :key="brand.name">
         <div class="flex flex-col items-center justify-center">
           <div :class="`brand-image aspect-ratio-box ${brand.name.toLowerCase()}`">
-            <img :src="brand.imageUrl" :alt="brand.name" class="max-w-full max-h-full object-contain">
+            <img 
+    :src="brand.imageUrl" 
+    :alt="brand.name" 
+    :width="brand.width" 
+    :height="brand.height" 
+    class="max-w-full max-h-full object-contain"
+>
           </div>
           <span class="text-sm mt-2">{{ brand.name }}</span>
         </div>
