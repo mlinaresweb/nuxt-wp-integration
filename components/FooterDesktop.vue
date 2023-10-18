@@ -40,7 +40,7 @@
   
         <div class="ml-[-25px] xl:ml-0">
           <h1 class="font-bold text-xl mb-4">Suscríbete</h1>
-          <input type="email" placeholder="Email" class="p-2 w-auto mb-4 bg-transparent text-white rounded-lg border-white">
+          <input type="email" placeholder="Email" class="p-2 w-auto mb-4 bg-transparent text-white rounded-lg border-white ">
           <div class=" flex flex-wrap gap-4 text-center">
           <a
             href="#"
