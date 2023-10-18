@@ -36,10 +36,7 @@ useHead(() => ({
       href: '/favicon.ico'
     }
   ],
-  script: [
-      { src: '/_nuxt/entry.d9db509e.js', defer: true },
-      { src: '/_nuxt/swiper-vue.843af6a0.js', defer: true }
-    ],
+  
 }));
 useServerSeoMeta({
     title: () => data.value[0].yoast_head_json.title,
