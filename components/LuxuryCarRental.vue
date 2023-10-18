@@ -1,12 +1,15 @@
 <template>
-  <div class="bg-white p-12 rounded-lg md:mx-12 lg:mx-12 w-full overflow-hidden  ">
+  <div class="bg-white p-8 md:p-12 rounded-lg md:mx-12 lg:mx-12 w-full overflow-hidden  ">
     <h2 class="text-2xl font-semibold mb-10 mt-4">Alquiler de coches de Lujo Barcelona</h2>
-    <p class="mb-14 pr-20">Vive una experiencia inolvidable al volante del coche de tus sueños. En nuestra extensa gama de vehículos, encontrarás las marcas más prestigiosas y exclusivas del mercado. Desde un superdeportivo que te hará sentir la emoción de la velocidad, hasta un espacioso y cómodo SUV ideal para disfrutar de una agradable excursión en familia. Puedes alquilarlo por horas o días, o si lo prefieres, explorar nuestras rutas y experiencias Vip para descubrir la cultura y los idílicos paisajes de Catalunya. Con más de una década de experiencia en el alquiler de coches de lujo, te garantizamos que no te decepcionaremos.</p>
+    <p class="mb-14 md:pr-20">Vive una experiencia inolvidable al volante del coche de tus sueños. En nuestra extensa gama de vehículos, encontrarás las marcas más prestigiosas y exclusivas del mercado. Desde un superdeportivo que te hará sentir la emoción de la velocidad, hasta un espacioso y cómodo SUV ideal para disfrutar de una agradable excursión en familia. Puedes alquilarlo por horas o días, o si lo prefieres, explorar nuestras rutas y experiencias Vip para descubrir la cultura y los idílicos paisajes de Catalunya. Con más de una década de experiencia en el alquiler de coches de lujo, te garantizamos que no te decepcionaremos.</p>
 
     <swiper
-    :slides-per-view="2.2"
+    :slides-per-view="1.2"
     :space-between="10"
     :breakpoints="{
+      640: {
+            slidesPerView: 3.2,
+        },
         1024: {
             slidesPerView: 4.2,
         }
