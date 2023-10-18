@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   plugins: [
     '~/plugins/i18n.ts'
   ],
-  modules: ['nuxt-swiper'],
+  modules: ['nuxt-swiper', '@nuxt/image',],
   swiper: {
     // Swiper options
     //----------------------

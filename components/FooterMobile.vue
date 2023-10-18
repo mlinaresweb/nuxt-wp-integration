@@ -50,7 +50,7 @@
           </div>
   
           <div class="flex justify-center items-center pb-4 pt-4">
-                <img src="/logo.png" alt="Logo" class="mr-4">
+                <NuxtImg src="/logo.png" alt="Logo" class="mr-4" width="20px" height="30px"/>
                 <h1 class="font-bold text-lg">Coches de Lujo</h1>
             </div>
         </div>

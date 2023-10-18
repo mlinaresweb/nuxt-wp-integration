@@ -6,13 +6,13 @@
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6" v-if="isLargeScreen">
       <div v-for="brand in brands" :key="brand.name" class="flex flex-col items-center justify-center">
         <div :class="`brand-image aspect-ratio-box ${brand.name.toLowerCase()}`">
-          <img 
+          <NuxtImg 
     :src="brand.imageUrl" 
     :alt="brand.name" 
     :width="brand.width" 
     :height="brand.height" 
     class="max-w-full max-h-full object-contain"
->
+/>
         </div>
         <span class="text-sm mt-2">{{ brand.name }}</span>
       </div>
@@ -24,13 +24,13 @@
       <swiper-slide v-for="brand in brands" :key="brand.name">
         <div class="flex flex-col items-center justify-center">
           <div :class="`brand-image aspect-ratio-box ${brand.name.toLowerCase()}`">
-            <img 
+            <NuxtImg 
     :src="brand.imageUrl" 
     :alt="brand.name" 
     :width="brand.width" 
     :height="brand.height" 
     class="max-w-full max-h-full object-contain"
->
+/>
           </div>
           <span class="text-sm mt-2">{{ brand.name }}</span>
         </div>
