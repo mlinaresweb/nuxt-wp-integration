@@ -32,7 +32,8 @@
       </SwiperSlide>
     </Swiper>
     <p class="mt-12">
-      Con el objetivo de hacer que tu visita a Barcelona sea única, te ofrecemos diferentes servicios que mejorarán tu estancia...
+      Con el objetivo de hacer que tu visita a Barcelona sea única, te ofrecemos diferentes servicios que mejorarán tu estancia. Disfruta de visitas guiadas por Barcelona para descubrir sus rincones más emblemáticos. La comodidad de contratar un chofer exclusivo que te facilitará tus desplazamientos desde el aeropuerto y por toda la ciudad, y la posibilidad de contratar el coche de lujo que más te apetezca.
+
     </p>
   </div>
 </template>

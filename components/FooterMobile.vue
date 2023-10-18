@@ -1,22 +1,22 @@
 <template>
-    <footer class="bg-luxury-blue text-white p-4 ">
+    <footer class="bg-luxury-blue text-white p-8 ">
       <div class="container mx-auto">
         <div class="flex flex-col space-y-4">
           <div class="flex justify-between">
-            <div>
-              Contáctanos a través de correo de Lun. a Juv. de 10:00 a 19:00 y Vie. de 10:00 a 15:00
-            </div>
+           
+             <p class="text-sm"> Contáctanos a través de correo de Lun. a Juv. de 10:00 a 19:00 y Vie. de 10:00 a 15:00</p>
+            
            
           </div>
           <div>
               Email
               <br>
-              email@cochesdelujo.cat
+              <p class="text-sm text-gray-300">email@cochesdelujo.cat</p>            
             </div>
           <div>
             Llámanos
             <br>
-            (00) 112 365 489
+           <p class="text-sm text-gray-300"> (00) 112 365 489 </p>
           </div>
   
           <div class="flex flex-col space-y-2">
@@ -34,24 +34,24 @@
           <div class="flex justify-between">
             <div class="flex flex-col space-y-2">
               <h3 class="text-lg">Nuestras sugerencias</h3>
-              <a href="#" class="text-sm">Alquiler Ferrari Barcelona</a>
-              <a href="#" class="text-sm">Alquiler Porsche Barcelona</a>
-              <a href="#" class="text-sm">Alquiler Lamborghini Barcelona</a>
-              <a href="#" class="text-sm">Coches para bodas</a>
-              <a href="#" class="text-sm">Alquiler coche por hora</a>
-              <a href="#" class="text-sm">Visita guiada</a>
+              <a href="#" class="text-sm text-gray-300">Alquiler Ferrari Barcelona</a>
+              <a href="#" class="text-sm text-gray-300">Alquiler Porsche Barcelona</a>
+              <a href="#" class="text-sm text-gray-300">Alquiler Lamborghini Barcelona</a>
+              <a href="#" class="text-sm text-gray-300">Coches para bodas</a>
+              <a href="#" class="text-sm text-gray-300">Alquiler coche por hora</a>
+              <a href="#" class="text-sm text-gray-300">Visita guiada</a>
             </div>
             <div class="flex flex-col space-y-2">
                 <h3 class="text-lg">Paginas</h3>
-              <a href="#" class="text-sm">Blog</a>
-              <a href="#" class="text-sm">Contacto</a>
-              <a href="#" class="text-sm">Nosotros</a>
+              <a href="#" class="text-sm text-gray-300">Blog</a>
+              <a href="#" class="text-sm text-gray-300">Contacto</a>
+              <a href="#" class="text-sm text-gray-300">Nosotros</a>
             </div>
           </div>
   
           <div class="flex justify-center items-center pb-4 pt-4">
                 <img src="/logo.png" alt="Logo" class="mr-4">
-                <h1 class="font-bold text-xl">Coches de Lujo</h1>
+                <h1 class="font-bold text-lg">Coches de Lujo</h1>
             </div>
         </div>
       </div>

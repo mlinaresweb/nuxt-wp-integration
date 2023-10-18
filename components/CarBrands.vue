@@ -1,12 +1,29 @@
 <template>
-  <div class="brands-container py-8 md:mx-16 lg:mx-16 max-w-screen-xl mx-auto">
-    <h2 class="text-start mb-6 font-semibold text-xl ml-12">Nuestras marcas</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+  <div class="brands-container py-8 max-w-screen-xl md:mx-12 2xl:mx-auto">
+    <h2 class="text-left mb-6 font-semibold text-xl md:ml-12 ml-8 ">Nuestras marcas</h2>
+    
+    <!-- En pantallas grandes -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6" v-if="isLargeScreen">
       <div v-for="brand in brands" :key="brand.name" class="flex flex-col items-center justify-center">
-        <img :src="brand.imageUrl" :alt="brand.name" class="w-8 h-auto object-contain mb-2">
-        <span class="text-sm">{{ brand.name }}</span>
+        <div :class="`brand-image ${brand.name.toLowerCase()}`">
+          <img :src="brand.imageUrl" :alt="brand.name" class="max-w-full max-h-full object-contain">
+        </div>
+        <span class="text-sm mt-2">{{ brand.name }}</span>
       </div>
     </div>
+    
+    <!-- En pantallas móviles -->
+    <swiper v-else :slides-per-view="4"
+    :space-between="10">
+      <swiper-slide v-for="brand in brands" :key="brand.name">
+        <div class="flex flex-col items-center justify-center">
+          <div :class="`brand-image ${brand.name.toLowerCase()}`">
+            <img :src="brand.imageUrl" :alt="brand.name" class="max-w-full max-h-full object-contain">
+          </div>
+          <span class="text-sm mt-2">{{ brand.name }}</span>
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -41,9 +58,30 @@
         { name: 'Bentley', imageUrl: 'https://i.ibb.co/61nnv4f/bentley.webp' },
         { name: 'Hummer', imageUrl: 'https://i.ibb.co/vZGtk37/hummer-logo-1.webp' },
       ]);
-  
+      
+      const screenWidth = ref<number>(0);  // valor inicial
+
+    const isLargeScreen = computed(() => {
+      return screenWidth.value > 768;  // This value can be adjusted as per your requirement
+    });
+
+    const updateScreenWidth = () => {
+      screenWidth.value = window.innerWidth;
+    };
+
+    onMounted(() => {
+      updateScreenWidth();  // Establecer el valor inicial en el montaje
+      window.addEventListener('resize', updateScreenWidth);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener('resize', updateScreenWidth);
+    });
+
+
       return {
         brands,
+        isLargeScreen
       };
     },
   });

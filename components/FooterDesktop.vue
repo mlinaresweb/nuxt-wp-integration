@@ -1,6 +1,6 @@
 <template>
     <footer class="bg-luxury-blue text-white p-8">
-      <div class="container mx-16 grid grid-cols-4 2xl:gap-72 gap-6">
+      <div class="container mx-16 grid grid-cols-4  gap-6 2xl:mx-auto  2xl:gap-44">
         <div>
             <div class="flex items-center mb-4">
                 <img src="/logo.png" alt="Logo" class="mr-4">
@@ -8,18 +8,18 @@
             </div>
           <div class="space-y-2">
             <p>Contactános a través de correo</p>
-            <p>Lun. a Juev de 10.00 a 19.00</p>
-            <p>Vie. de 10.00 a 15.00</p>
+            <p class="text-sm text-gray-300">Lun. a Juev de 10.00 a 19.00</p>
+            <p class="text-sm text-gray-300">Vie. de 10.00 a 15.00</p>
             <p>Email</p>
-            <p><a href="mailto:reservas@cochesdelujo.cat" >reservas@cochesdelujo.cat</a></p>
+            <p class="text-sm text-gray-300"><a href="mailto:reservas@cochesdelujo.cat" >reservas@cochesdelujo.cat</a></p>
             <p>LLámanos</p>
-            <p>(00) 112 365 489</p>
+            <p class="text-sm text-gray-300">(00) 112 365 489</p>
           </div>
         </div>
   
         <div>
           <h1 class="font-bold text-xl mb-4">Nuestras sugerencias</h1>
-          <ul class="space-y-2">
+          <ul class="space-y-2 text-sm text-gray-300">
             <li><a href="#" >Alquiler Ferrari Barcelona</a></li>
             <li><a href="#" >Alquiler Porsche Barcelona</a></li>
             <li><a href="#">Alquiler Lamborghini Barcelona</a></li>
@@ -30,8 +30,8 @@
         </div>
   
         <div>
-          <h1 class="font-bold text-xl mb-4">Páginas</h1>
-          <ul class="space-y-2">
+          <h1 class="font-bold text-xl mb-4 ">Páginas</h1>
+          <ul class="space-y-2 text-sm text-gray-300">
             <li><a href="#" >Blog</a></li>
             <li><a href="#" >Contacto</a></li>
             <li><a href="#" >Nosotros</a></li>
@@ -52,10 +52,10 @@
         </div>
       </div>
       
-      <div class="mt-10 border-t pt-4 text-right -mb-3">
+      <div class="mt-10 border-t pt-4 text-right -mb-3 text-sm">
         <a href="#" class="mr-4">Terms and conditions</a>
         <a href="#" class="mr-4">Legal Note</a>
-        <a href="#" class="mr-4">Privacy</a>
+        <a href="#" class="mr-10">Privacy</a>
       </div>
     </footer>
   </template>
