@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative w-full bg-cover bg-center bg-no-repeat bg-[url(/bannercoche.webp)]"
+    class="relative w-full bg-cover bg-center bg-no-repeat bg-[url(https://i.postimg.cc/5y1nQFpv/bannercoche.webp)]"
 
   >
     <!-- Degradado oscuro -->
