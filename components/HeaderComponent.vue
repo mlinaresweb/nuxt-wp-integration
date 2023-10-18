@@ -1,14 +1,8 @@
 <template>
-  <section class="relative w-full">
-    
-    <!-- Imagen optimizada con nuxt-img -->
-    <NuxtImg
-      src="https://i.ibb.co/XLksJV3/bannercoche-1.webp"
-      class="absolute inset-0 w-full h-full object-cover"
-      alt="Banner Coche"
-      loading="lazy" 
+  <section
+    class="relative w-full bg-cover bg-center bg-no-repeat bg-[url(https://i.ibb.co/XLksJV3/bannercoche-1.webp)]"
 
-    ></NuxtImg>
+  >
     <!-- Degradado oscuro -->
     <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-60"></div>
 
