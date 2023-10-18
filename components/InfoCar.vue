@@ -11,7 +11,14 @@
             Excelencia
           </li>
           <li class="flex items-center text-white space-x-2 gap-2 2xl:text-xl">
-            <NuxtImg src="https://i.ibb.co/qrSfwTs/confianza.webp" loading="lazy" alt="Icono Confianza" class="w-8 h-auto 2xl:w-12 object-cover"/>
+            <NuxtImg 
+    src="https://i.ibb.co/qrSfwTs/confianza.webp" 
+    loading="lazy" 
+    alt="Icono Confianza" 
+    width="32"
+    height="25"
+    class="w-8 h-auto 2xl:w-12 object-cover" 
+/>
             Confianza
           </li>
           <li class="flex items-center text-white space-x-2 gap-2 2xl:text-xl">
