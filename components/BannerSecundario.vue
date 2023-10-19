@@ -1,6 +1,14 @@
 <template>
   <div class="relative mb-12 h-56 md:h-64 lg:h-72 xl:h-auto">
-    <NuxtImg src="https://i.ibb.co/K9mnphf/banner22.webp" alt="Banner" loading="lazy"   sizes="100vw sm:50vw" height="50" class="w-full h-full object-cover" />
+    <NuxtImg
+   src="https://i.ibb.co/K9mnphf/banner22.webp"
+   srcset="https://i.ibb.co/path/banner-small.webp 400w, https://i.ibb.co/path/banner-medium.webp 800w, https://i.ibb.co/path/banner-large.webp 1200w"
+   sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"
+   alt="Banner"
+   loading="lazy"
+   class="w-full h-full object-cover"
+/>
+
     <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black via-transparent to-transparent opacity-70"></div>
   </div>
 </template>
