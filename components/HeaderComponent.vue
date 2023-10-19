@@ -4,7 +4,7 @@
   <nuxt-img
       :src="desktopImageUrl"
       :srcset="srcsetImages"
-      sizes="(max-width: 640px) 640px, 100vw"
+      sizes="(max-width: 640px) 640px,(max-width: 380px) 380px 100vw"
       layout="responsive"
       class="absolute inset-0 w-full h-full object-cover"
       alt="banner porsche"
