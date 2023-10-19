@@ -46,17 +46,17 @@
         servicios: [
           {
             titulo: "Visita guiada",
-            imagen: "https://i.ibb.co/mcmF37B/avion.webp",
+            imagen: "https://i.ibb.co/Wk9DfJ6/avion-1.webp",
             info: "Info"
           },
           {
             titulo: "Recogida en aeropuerto",
-            imagen: "https://i.ibb.co/JHYVbQR/ciudad.webp",
+            imagen: "https://i.ibb.co/x6X8GBV/ciudad-1.webp",
             info: "Info"
           },
           {
             titulo: "Servicio Chófer",
-            imagen: "https://i.ibb.co/yFjnMzP/volante.webp",
+            imagen: "https://i.ibb.co/KzgG0wj/volante-1.webp",
             info: "Info"
           }
         ]

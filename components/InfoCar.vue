@@ -32,7 +32,7 @@
         </ul>
       </div>
       <div class="hidden sm:block w-1/2">
-        <NuxtImg src="https://i.ibb.co/q7XF7dr/coche2.webp" loading="lazy" alt="Luxury Cars" class="h-full w-full object-cover"/>
+        <NuxtImg src="https://i.ibb.co/3r1YbMc/coche2-1.webp" loading="lazy" alt="Luxury Cars" class="h-full w-full object-cover"/>
       </div>
     </div>
 </template>

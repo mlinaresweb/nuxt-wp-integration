@@ -43,31 +43,31 @@ export default {
     const cars = ref([
       {
         name: 'BMW',
-        image: 'https://i.ibb.co/7NRZzGH/bmw.webp',
+        image: 'https://i.ibb.co/gd9y9Dd/bmw-2.webp',
         description: 'Alquiler de BMW',
         price: '€150 / al dia'
       },
       {
         name: 'Porsche',
-        image: 'https://i.ibb.co/TrFFCV4/porsche.webp',
+        image: 'https://i.ibb.co/f4nf2ZZ/porsche-2.webp',
         description: 'Alquiler de Porsche',
         price: '€150 / al dia'
       },
       {
         name: 'Mustang', 
-        image: 'https://i.ibb.co/XLRC2h3/mustang.webp',
+        image: 'https://i.ibb.co/DLT0JmJ/mustang-2.webp',
         description: 'Alquiler de Mustang', 
         price: '€150 / al dia'
       },
       {
         name: 'Lamborghini',
-        image: 'https://i.ibb.co/C5dDVtS/lambo.webp',
+        image: 'https://i.ibb.co/J2gNntg/lambo-1.webp',
         description: 'Alquiler de Lamborghini',
         price: '€150 / al dia'
       },
       {
         name: 'BMW',
-        image: 'https://i.ibb.co/7NRZzGH/bmw.webp',
+        image: 'https://i.ibb.co/gd9y9Dd/bmw-2.webp',
         description: 'Alquiler de BMW',
         price: '€150 / al dia'
       },
