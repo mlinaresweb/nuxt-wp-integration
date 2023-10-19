@@ -40,9 +40,15 @@
 </template>
 
 <script setup>
-  const props = defineProps({
-    title: String,
-    subtitle: String,
+ const props = defineProps({
+    title: {
+      type: String,
+      default: 'Disfruta de tu Porsche carrera' 
+    },
+    subtitle: {
+      type: String,
+      default: 'Porsche 911 Carrera S' 
+    }
   });
   const desktopImageUrl = 'https://i.ibb.co/3FBRsdh/bannercoche-2.webp';
 const mobileImageUrl = 'https://i.ibb.co/Qrr8mGc/bannercoche-2-1.webp'; 
