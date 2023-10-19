@@ -1,6 +1,8 @@
 <template>
- <section class="relative w-full bg-cover bg-center bg-no-repeat header-background">
+  <section
+    class="relative w-full bg-cover bg-center bg-no-repeat bg-[url(https://i.ibb.co/3FBRsdh/bannercoche-2.webp)]"
 
+  >
     <!-- Degradado oscuro -->
     <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-60"></div>
 
@@ -37,15 +39,15 @@
     title: String,
     subtitle: String,
   });
-</script>
-<style scoped>
-.header-background {
-  background-image: url('https://i.ibb.co/3FBRsdh/bannercoche-2.webp');
-}
-
-@media (max-width: 640px) { 
-  .header-background {
-    background-image: url('/bannermovile.webp');
+  useHead(() => {
+  return {
+    link: [
+      {
+        rel: 'preload',
+        href: 'https://i.ibb.co/3FBRsdh/bannercoche-2.webp',
+        as: 'image'
+      }
+    ]
   }
-}
-</style>
+})
+</script>
