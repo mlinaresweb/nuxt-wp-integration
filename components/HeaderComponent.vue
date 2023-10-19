@@ -10,7 +10,7 @@
       alt="banner porsche"
     />
     <!-- Degradado oscuro -->
-
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-60"></div>
     <!-- Nav Component -->
     <NavComponent></NavComponent>
 
