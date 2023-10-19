@@ -1,13 +1,15 @@
 <template>
   <section class="relative w-full bg-cover bg-center bg-no-repeat">
-    <!-- Imagen adaptativa -->
-    <nuxt-img
-      :src="imageUrl"
+  <!-- Imagen adaptativa -->
+  <nuxt-img
+      :src="desktopImageUrl"
+      :srcset="srcsetImages"
       sizes="(max-width: 640px) 640px, 100vw"
       width="1920" 
-      height="871"
+      height="1080"
       layout="responsive"
       class="absolute inset-0 w-full h-full object-cover"
+      alt="banner porsche"
     />
     <!-- Degradado oscuro -->
     <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-60"></div>
@@ -45,14 +47,23 @@
     title: String,
     subtitle: String,
   });
-  const imageUrl = 'https://i.ibb.co/3FBRsdh/bannercoche-2.webp';
+  const desktopImageUrl = 'https://i.ibb.co/3FBRsdh/bannercoche-2.webp';
+const mobileImageUrl = 'https://i.ibb.co/Qrr8mGc/bannercoche-2-1.webp'; 
+
+const srcsetImages = `${mobileImageUrl} 640w, ${desktopImageUrl} 1920w`;
 
 useHead(() => {
   return {
     link: [
       {
         rel: 'preload',
-        href: imageUrl,
+        href: desktopImageUrl, 
+        as: 'image',
+        type: 'image/webp',
+      },
+      {
+        rel: 'preload',
+        href: mobileImageUrl, 
         as: 'image',
         type: 'image/webp',  
       }
