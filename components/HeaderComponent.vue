@@ -45,7 +45,7 @@
 
 @media (max-width: 640px) { 
   .header-background {
-    background-image: url('https://i.ibb.co/Qrr8mGc/bannercoche-2-1.webp');
+    background-image: url('/bannermovile.webp');
   }
 }
 </style>

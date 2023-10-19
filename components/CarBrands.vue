@@ -76,7 +76,7 @@
       const screenWidth = ref<number>(0);  // valor inicial
 
     const isLargeScreen = computed(() => {
-      return screenWidth.value > 768;  // This value can be adjusted as per your requirement
+      return screenWidth.value > 768;  
     });
 
     const updateScreenWidth = () => {
