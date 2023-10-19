@@ -16,22 +16,11 @@ if (route.params.slug && route.params.slug.length > 1) {
 }
 
 
-// const loadComponent = (name) => {
-//     return defineAsyncComponent(() => import(`@/components/pages/${name}.vue`))
-// };
-
-// const CurrentComponent = shallowRef(loadComponent(slug.value));
-
-const CurrentComponent = shallowRef(null);
-
-// Función para cargar el componente
-const loadComponent = async (name) => {
-    const comp = await import(`@/components/pages/${name}.vue`);
-    CurrentComponent.value = comp.default;
+const loadComponent = (name) => {
+    return defineAsyncComponent(() => import(`@/components/pages/${name}.vue`))
 };
 
-// Carga el componente inicialmente
-loadComponent(slug.value);
+const CurrentComponent = shallowRef(loadComponent(slug.value));
 
 const { data, pending, error, refresh,  } = await useFetch('https://wordpress-1123256-3934790.cloudwaysapps.com/wp-json/wp/v2/pages', {
     query: { slug: slug.value, language:language.value }
