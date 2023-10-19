@@ -1,8 +1,14 @@
 <template>
-  <section
-    class="relative w-full bg-cover bg-center bg-no-repeat bg-[url(https://i.ibb.co/3FBRsdh/bannercoche-2.webp)]"
-
-  >
+  <section class="relative w-full bg-cover bg-center bg-no-repeat">
+    <!-- Imagen adaptativa -->
+    <nuxt-img
+      :src="imageUrl"
+      sizes="(max-width: 640px) 640px, 100vw"
+      width="1920" 
+      height="871"
+      layout="responsive"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
     <!-- Degradado oscuro -->
     <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-60"></div>
 
@@ -39,16 +45,19 @@
     title: String,
     subtitle: String,
   });
-  useHead(() => {
+  const imageUrl = 'https://i.ibb.co/3FBRsdh/bannercoche-2.webp';
+
+useHead(() => {
   return {
     link: [
       {
         rel: 'preload',
-        href: 'https://i.ibb.co/3FBRsdh/bannercoche-2.webp',
-        as: 'image'
+        href: imageUrl,
+        as: 'image',
+        type: 'image/webp',  
       }
     ]
-  }
+  };
 });
 </script>
 <style scoped>
