@@ -87,7 +87,7 @@ function changeLanguage() {
   }
 
   // Al cambiar el idioma, guárdalo en localStorage
-  localStorage.setItem('selectedLanguage', selectedLanguage.value);
+  // localStorage.setItem('selectedLanguage', selectedLanguage.value);
 }
 // Cierra el menú cuando se haga clic fuera de él
 watch(outsideClicked, (newValue) => {
@@ -107,16 +107,6 @@ function toggleMenu() {
 </script>
 
 <style scoped>
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  white-space: nowrap;
-}
+
 
 </style>
