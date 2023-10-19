@@ -6,7 +6,7 @@
       :srcset="srcsetImages"
       sizes="(max-width: 640px) 640px, 100vw"
       width="1920" 
-      height="1080"
+      height="871"
       layout="responsive"
       class="absolute inset-0 w-full h-full object-cover"
       alt="banner porsche"
@@ -47,8 +47,8 @@
     title: String,
     subtitle: String,
   });
-  const desktopImageUrl = 'https://i.ibb.co/3FBRsdh/bannercoche-2.webp';
-const mobileImageUrl = 'https://i.ibb.co/Qrr8mGc/bannercoche-2-1.webp'; 
+  const desktopImageUrl = 'https://res.cloudinary.com/dudw9s7jd/image/upload/f_auto,q_auto/mzfe87wgeauc2p94z4lw';
+const mobileImageUrl = 'https://res.cloudinary.com/dudw9s7jd/image/upload/f_auto,q_auto/ejdc1ujksgr7t9oolvza'; 
 
 const srcsetImages = `${mobileImageUrl} 640w, ${desktopImageUrl} 1920w`;
 
