@@ -99,11 +99,11 @@ function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value;
 }
 
-onMounted(() => {
-  // Intenta obtener el idioma seleccionado de localStorage si estás en el lado del cliente
-  const initialLanguage = process.client ? localStorage.getItem('selectedLanguage') || locale.value : locale.value;
-  selectedLanguage.value = initialLanguage;
-});
+// onMounted(() => {
+//   // Intenta obtener el idioma seleccionado de localStorage si estás en el lado del cliente
+//   const initialLanguage = process.client ? localStorage.getItem('selectedLanguage') || locale.value : locale.value;
+//   selectedLanguage.value = initialLanguage;
+// });
 </script>
 
 <style scoped>
