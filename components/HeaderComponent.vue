@@ -15,7 +15,7 @@
     <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-60"></div>
 
     <!-- Nav Component -->
-    <NavComponent></NavComponent>
+
 
     <div
       class="relative z-10 max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
