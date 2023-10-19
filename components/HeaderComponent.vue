@@ -1,14 +1,7 @@
 <template>
-  <section class="relative w-full bg-cover bg-center bg-no-repeat">
+  <section class="adaptive-bg">
   <!-- Imagen adaptativa -->
-  <nuxt-img
-      :src="desktopImageUrl"
-      :srcset="srcsetImages"
-      sizes="(max-width: 640px) 640px,(max-width: 380px) 380px 100vw"
-      layout="responsive"
-      class="absolute inset-0 w-full h-full object-cover"
-      alt="banner porsche"
-    />
+  
     <!-- Degradado oscuro -->
     <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-60"></div>
     <!-- Nav Component -->
@@ -50,23 +43,20 @@
       default: 'Porsche 911 Carrera S' 
     }
   });
-  const desktopImageUrl = 'https://i.ibb.co/3FBRsdh/bannercoche-2.webp';
-const mobileImageUrl = 'https://i.ibb.co/Qrr8mGc/bannercoche-2-1.webp'; 
 
-const srcsetImages = `${mobileImageUrl} 640w, ${desktopImageUrl} 1920w`;
 
 useHead(() => {
   return {
     link: [
       {
         rel: 'preload',
-        href: desktopImageUrl, 
+        href: 'https://i.ibb.co/3FBRsdh/bannercoche-2.webp', 
         as: 'image',
         type: 'image/webp',
       },
       {
         rel: 'preload',
-        href: mobileImageUrl, 
+        href: 'https://i.ibb.co/Qrr8mGc/bannercoche-2-1.webp', 
         as: 'image',
         type: 'image/webp',  
       }
@@ -75,7 +65,22 @@ useHead(() => {
 });
 </script>
 <style scoped>
-.container-texto{
+.container-texto {
   max-width: 380px;
+}
+
+.adaptive-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Definimos la imagen por defecto para dispositivos más grandes (desktop) */
+  background-image: url('https://i.ibb.co/3FBRsdh/bannercoche-2.webp');
+}
+
+/* Utilizamos media queries para cambiar la imagen para dispositivos más pequeños (mobile) */
+@media (max-width: 640px) {
+  .adaptive-bg {
+    background-image: url('https://i.ibb.co/Qrr8mGc/bannercoche-2-1.webp');
+  }
 }
 </style>
