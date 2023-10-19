@@ -1,9 +1,8 @@
 <template>
   <div class="relative mb-12 h-56 md:h-64 lg:h-72 xl:h-auto">
     <NuxtImg
-   src="https://i.ibb.co/K9mnphf/banner22.webp"
-   srcset="https://i.ibb.co/path/banner-small.webp 400w, https://i.ibb.co/path/banner-medium.webp 800w, https://i.ibb.co/path/banner-large.webp 1200w"
-   sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"
+   src="/banner222.webp"
+   width="1200" height="auto"
    alt="Banner"
    loading="lazy"
    class="w-full h-full object-cover"
